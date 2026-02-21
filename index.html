@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Snake Arena</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app">
+
+    <!-- MENU -->
+    <div id="menuScreen" class="screen active">
+      <div class="card">
+        <h1 id="titleText">Snake Arena</h1>
+
+        <div class="row">
+          <button id="startBtn" class="btn primary">Start</button>
+        </div>
+
+        <div class="row">
+          <label id="modeLabel">Mode</label>
+          <select id="modeSelect">
+            <option value="normal">Normal</option>
+            <option value="hardcore">Hardcore</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label id="langLabel">Language</label>
+          <select id="langSelect">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <button id="leaderboardBtn" class="btn">Leaderboard</button>
+        </div>
+
+        <p class="hint" id="hintText">Controls: arrows / swipe / buttons.</p>
+      </div>
+    </div>
+
+    <!-- GAME -->
+    <div id="gameScreen" class="screen">
+      <div class="topBar">
+        <div class="pill" id="scoreDisplay">Score: 0</div>
+        <div class="pill" id="statusDisplay"></div>
+        <button id="backToMenu" class="btn small">Menu</button>
+      </div>
+
+      <div class="canvasWrap">
+        <canvas id="game" width="560" height="560"></canvas>
+      </div>
+
+      <!-- Mobile controls -->
+      <div id="mobileControls" class="mobileControls">
+        <button class="dpad up" data-dir="up">▲</button>
+        <button class="dpad left" data-dir="left">◀</button>
+        <button class="dpad right" data-dir="right">▶</button>
+        <button class="dpad down" data-dir="down">▼</button>
+      </div>
+
+      <div class="subBar">
+        <div class="subPill" id="powerDisplay"></div>
+        <div class="subPill" id="debugDisplay"></div>
+      </div>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="leaderboardScreen" class="screen">
+      <div class="card">
+        <div class="lbHeader">
+          <h2 id="lbTitle">Leaderboard</h2>
+          <button id="lbBackBtn" class="btn small">Back</button>
+        </div>
+
+        <div class="lbTabs">
+          <button class="tabBtn active" data-lbmode="normal" id="lbTabNormal">Normal</button>
+          <button class="tabBtn" data-lbmode="hardcore" id="lbTabHardcore">Hardcore</button>
+        </div>
+
+        <div id="lbList" class="lbList"></div>
+        <p class="hint" id="lbHint">Local leaderboard for now.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

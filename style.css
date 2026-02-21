@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+.wrap {
+  max-width: 560px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: auto;
+}
+
+button {
+  background: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover { border-color: #666; }
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #333;
+  background: #0b0b0b;
+  border-radius: 12px;
+}
+
+.hint {
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+/* --- Screens / Menu UI --- */
+#app {
+  max-width: 560px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+#menuScreen h1 {
+  margin: 0 0 16px 0;
+  font-size: 28px;
+}
+
+.menu-block {
+  margin: 12px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.menu-block label {
+  width: 90px;
+  opacity: 0.9;
+}
+
+select {
+  flex: 1;
+  background: #1a1a1a;
+  color: #eee;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#menuScreen button {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #eee;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#menuScreen button:hover { border-color: #666; }
+
+.topBar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.topBar span {
+  padding: 6px 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #141414;
+}
+
+#backToMenu {
+  margin-left: auto;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
